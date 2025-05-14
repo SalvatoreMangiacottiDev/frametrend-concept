@@ -7,7 +7,7 @@
 body {
     line-height: 1.5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 ul li {
@@ -84,17 +84,18 @@ header {
 /* hero */
 
 #hero {
-    height: 80vh;
-    padding: 2rem;
+    margin-bottom: 10rem;
 }
 
 /* hero background*/
 
 #hero-background {
-    background-color: orangered;
-    max-width: 100%;
-    max-height: 100%;
-    margin-bottom: 2rem;
+    height: 80vh;
+    background-image: url('./media/img/hero-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1rem;
 }
 
 /* hero content */
@@ -106,23 +107,68 @@ header {
 }
 
 
+/* cards-container */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+/* cards */
+
+.card {
+    max-width: calc(100% / 3 - 1rem);
+}
+
+/* cards-content */
+
+.card-content {
+    padding-right: 1rem;
+}
+
 
 /* @media tablet */
 
 @media screen and (max-width: 48rem) {
+
+    #hero {
+        margin-bottom: 5rem;
+    }
+
     #hero-content {
         max-width: 90%;
+    }
+
+
+    .cards-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: calc(100% / 2 - 1rem);
     }
 }
 
 /* @media mobile */
 
 @media screen and (max-width: 30rem) {
+
     .navbar ul {
         display: none;
     }
 
     .navbar {
         justify-content: space-between;
+    }
+
+
+    .cards-container {
+        justify-content: center;
+    }
+
+    .card {
+        max-width: calc(100% / 1);
     }
 }
